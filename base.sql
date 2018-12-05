@@ -88,7 +88,7 @@ CREATE TABLE room_information(
 
 CREATE TABLE room_type(
 	id INT AUTO_INCREMENT primary key,
-	name varchar(20),
+	name varchar(30),
 	capacity INT,
 	smoking BOOLEAN,
 	price INT
