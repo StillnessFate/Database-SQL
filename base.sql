@@ -1,5 +1,5 @@
 CREATE TABLE reservation(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	time DATE,
 	type_id INT NOT NULL,
 	room_number INT NOT NULL,
@@ -16,28 +16,29 @@ CREATE TABLE reservation(
 
 
 CREATE TABLE reservation_type(
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
 CREATE TABLE payment(
-	id INT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	type_id INT,
 	price INT NOT NULL
 );
 
 CREATE TABLE payment_details(
-	payment_id INT NOT NULL,
+	payment_id INT AUTO_INCREMENT primary key,
 	contents VARCHAR(30),
 	item_price INT
 );
 
 CREATE TABLE payment_type(
-	id INT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
 CREATE TABLE imployee_information(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30),
 	sex VARCHAR(20),
 	date_of_birth DATE,
@@ -57,7 +58,7 @@ CREATE TABLE imployee_information(
 
 
 CREATE TABLE guest_information(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30),
 	sex VARCHAR(20),
 	date_of_birth DATE,
@@ -86,7 +87,7 @@ CREATE TABLE room_information(
 
 
 CREATE TABLE room_type(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	name varchar(20),
 	capacity INT,
 	smoking BOOLEAN,
@@ -101,7 +102,7 @@ CREATE TABLE room_equipment(
 
 
 CREATE TABLE equipment(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30),
 	type INT,
 	count INT,
@@ -109,7 +110,7 @@ CREATE TABLE equipment(
 );
 
 CREATE TABLE equipment_log(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	time DATE,
 	room_number INT,
 	equipment_id INT,
@@ -120,7 +121,7 @@ CREATE TABLE equipment_log(
 
 
 CREATE TABLE keycard(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	type_id INT,
 	room_number INT,
 	guest_id INT
@@ -129,13 +130,13 @@ CREATE TABLE keycard(
 
 
 CREATE TABLE keycard_type(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
 
 CREATE TABLE room_temperature_log(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	time DATE,
 	room_number INT,
 	temperature DOUBLE(4,1),
@@ -144,7 +145,7 @@ CREATE TABLE room_temperature_log(
 
 
 CREATE TABLE membership_type(
-   id INT AUTO_INCREMENT,
+   id INT AUTO_INCREMENT primary key,
    name VARCHAR(30)
 );
 
@@ -158,18 +159,18 @@ CREATE TABLE membership(
 
 
 CREATE TABLE employee_type(
-   id INT AUTO_INCREMENT NOT NULL,
+   id INT AUTO_INCREMENT primary key,
    name VARCHAR(30)
 );
 
 CREATE TABLE employee_position(
-   id INT AUTO_INCREMENT,
+   id INT AUTO_INCREMENT primary key,
    name VARCHAR(30)
 );
 
 
 CREATE TABLE attendance(
-   id INT AUTO_INCREMENT,
+   id INT AUTO_INCREMENT primary key,
    employee_id INT,
    work_start_time DATE,
    work_end_time DATE
@@ -177,7 +178,7 @@ CREATE TABLE attendance(
 
 
 CREATE TABLE complain(
-   id INT AUTO_INCREMENT,
+   id INT AUTO_INCREMENT primary key,
    manager_id INT,
    guest_id INT,
    type_id INT,
@@ -186,17 +187,17 @@ CREATE TABLE complain(
 );
 
 CREATE TABLE guest_type(
-   id INT AUTO_INCREMENT,
+   id INT AUTO_INCREMENT primary key,
    name VARCHAR(30)
 );
 
 CREATE TABLE complain_type(
-   id INT AUTO_INCREMENT,
+   id INT AUTO_INCREMENT primary key,
    name VARCHAR(30)
 );
 
 CREATE TABLE reservation_log(
-   id INT AUTO_INCREMENT,
+   id INT AUTO_INCREMENT primary key,
    time DATE,
    type_id INT,
    room_number INT,
@@ -213,7 +214,7 @@ CREATE TABLE reservation_log(
 
 
 CREATE TABLE membership_type(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
@@ -227,18 +228,18 @@ CREATE TABLE membership(
 
 
 CREATE TABLE employee_type(
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
 CREATE TABLE employee_position(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
 
 CREATE TABLE attendance(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	employee_id INT,
 	work_start_time DATE,
 	work_end_time DATE
@@ -246,7 +247,7 @@ CREATE TABLE attendance(
 
 
 CREATE TABLE complain(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	manager_id INT,
 	guest_id INT,
 	type_id INT,
@@ -255,17 +256,17 @@ CREATE TABLE complain(
 );
 
 CREATE TABLE guest_type(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
 CREATE TABLE complain_type(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
 );
 
 CREATE TABLE reservation_log(
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT primary key,
 	time DATE,
 	type_id INT,
 	room_number INT,
