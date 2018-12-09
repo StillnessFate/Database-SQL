@@ -263,3 +263,11 @@ CREATE TABLE reservation_log(
 	memo TEXT,
 	successful INT
 );
+
+CREATE TABLE account (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	user_id varchar(50) NOT NULL,
+	user_pwd varchar(50) NOT NULL,
+	user_key int(11) DEFAULT NULL,
+	PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
