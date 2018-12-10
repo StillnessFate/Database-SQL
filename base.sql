@@ -37,7 +37,7 @@ CREATE TABLE payment_type(
 	name VARCHAR(30)
 );
 
-CREATE TABLE imployee_information(
+CREATE TABLE employee_information(
 	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30),
 	sex VARCHAR(20),
