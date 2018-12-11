@@ -143,59 +143,6 @@ CREATE TABLE room_temperature_log(
 	humidity DOUBLE(4,1)
 );
 
-
-CREATE TABLE membership_type(
-	id INT AUTO_INCREMENT primary key,
-	name VARCHAR(30)
-);
-
-CREATE TABLE membership(
-	guest_id INT,
-	type_id INT,
-	start DATE,
-	end DATE,
-	point INT
-);
-
-
-CREATE TABLE employee_type(
-	id INT AUTO_INCREMENT primary key,
-	name VARCHAR(30)
-);
-
-CREATE TABLE employee_position(
-	id INT AUTO_INCREMENT primary key,
-	name VARCHAR(30)
-);
-
-
-CREATE TABLE attendance(
-	id INT AUTO_INCREMENT primary key,
-	employee_id INT,
-	work_start_time DATE,
-	work_end_time DATE
-);
-
-
-CREATE TABLE complain(
-	id INT AUTO_INCREMENT primary key,
-	manager_id INT,
-	guest_id INT,
-	type_id INT,
-	contents TEXT,
-	completed BOOLEAN
-);
-
-CREATE TABLE guest_type(
-	id INT AUTO_INCREMENT primary key,
-	name VARCHAR(30)
-);
-
-CREATE TABLE complain_type(
-	id INT AUTO_INCREMENT primary key,
-	name VARCHAR(30)
-);
-
 CREATE TABLE membership_type(
 	id INT AUTO_INCREMENT primary key,
 	name VARCHAR(30)
